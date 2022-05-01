@@ -288,8 +288,15 @@ if (txtCPF.getText().equals("")) {
             st.setString(1, txtCPF.getText());
             resultado = st.executeQuery(); //Executa o SELECT criado acima
             if (resultado.next()) { // Se encontrou o código do produto na tabela
-                txtNomeCompleto.setText(resultado.getString("Nome Completo"));
-                txtUsuario.setText(resultado.getString("Usuario"));
+                txtNomeCompleto.setText(resultado.getString("nm_completo"));
+                txtUsuario.setText(resultado.getString("usuario"));
+                pswSenha.setText(resultado.getString("senha"));
+                txtDtNascimento.setText(resultado.getString("dt_nascimento"));
+                cmbSexo.setSelectedItem(resultado.getString("sexo"));
+                txtEmail.setText(resultado.getString("email"));
+                txtEndereco.setText(resultado.getString("endereco"));
+                txtContato.setText(resultado.getString("contato"));
+                cmbCargo.setSelectedItem(resultado.getString("cargo"));
             
                 btnSalvar.setVisible(true);
                 btnBuscar.setVisible(true);
