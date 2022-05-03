@@ -55,6 +55,7 @@ public class TelaMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         pnlCadastrarUsuario = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtDtNascimento = new javax.swing.JTextField();
@@ -72,13 +73,17 @@ public class TelaMenu extends javax.swing.JFrame {
         lblSaudacao = new javax.swing.JLabel();
         cbmCliente = new javax.swing.JComboBox<>();
         btnBuscar = new javax.swing.JButton();
+        btnExcluir = new javax.swing.JButton();
+        btnAlterar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jmnFuncionarios = new javax.swing.JMenu();
-        jmnCadastrarFuncionarios = new javax.swing.JMenuItem();
-        jmnAlterarFuncionario = new javax.swing.JMenuItem();
         jmnClientes = new javax.swing.JMenu();
         jmnCadastrarClientes = new javax.swing.JMenuItem();
         jmnAlterarClientes = new javax.swing.JMenuItem();
+        jmnFuncionarios = new javax.swing.JMenu();
+        jmnCadastrarFuncionarios = new javax.swing.JMenuItem();
+        jmnAlterarFuncionario = new javax.swing.JMenuItem();
+
+        jButton1.setText("jButton1");
 
         setTitle("TelaMenu");
         getContentPane().setLayout(null);
@@ -166,28 +171,26 @@ public class TelaMenu extends javax.swing.JFrame {
         pnlCadastrarUsuario.add(btnBuscar);
         btnBuscar.setBounds(180, 220, 80, 30);
 
+        btnExcluir.setText("Excluir");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
+        pnlCadastrarUsuario.add(btnExcluir);
+        btnExcluir.setBounds(280, 220, 80, 30);
+
+        btnAlterar.setText("Alterar");
+        btnAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlterarActionPerformed(evt);
+            }
+        });
+        pnlCadastrarUsuario.add(btnAlterar);
+        btnAlterar.setBounds(380, 220, 70, 30);
+
         getContentPane().add(pnlCadastrarUsuario);
         pnlCadastrarUsuario.setBounds(0, 0, 620, 360);
-
-        jmnFuncionarios.setText("Funcionarios");
-
-        jmnCadastrarFuncionarios.setText("Cadastrar");
-        jmnCadastrarFuncionarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmnCadastrarFuncionariosActionPerformed(evt);
-            }
-        });
-        jmnFuncionarios.add(jmnCadastrarFuncionarios);
-
-        jmnAlterarFuncionario.setText("Alterar");
-        jmnAlterarFuncionario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmnAlterarFuncionarioActionPerformed(evt);
-            }
-        });
-        jmnFuncionarios.add(jmnAlterarFuncionario);
-
-        jMenuBar1.add(jmnFuncionarios);
 
         jmnClientes.setText("Clientes");
 
@@ -208,6 +211,26 @@ public class TelaMenu extends javax.swing.JFrame {
         jmnClientes.add(jmnAlterarClientes);
 
         jMenuBar1.add(jmnClientes);
+
+        jmnFuncionarios.setText("Funcionarios");
+
+        jmnCadastrarFuncionarios.setText("Cadastrar");
+        jmnCadastrarFuncionarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmnCadastrarFuncionariosActionPerformed(evt);
+            }
+        });
+        jmnFuncionarios.add(jmnCadastrarFuncionarios);
+
+        jmnAlterarFuncionario.setText("Alterar");
+        jmnAlterarFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmnAlterarFuncionarioActionPerformed(evt);
+            }
+        });
+        jmnFuncionarios.add(jmnAlterarFuncionario);
+
+        jMenuBar1.add(jmnFuncionarios);
 
         setJMenuBar(jMenuBar1);
 
@@ -260,6 +283,7 @@ public class TelaMenu extends javax.swing.JFrame {
          cbmCliente.setVisible(false);
          cmbCargo.setVisible(true);
           btnBuscar.setVisible(false);
+          btnSalvar.setVisible(true);
     }//GEN-LAST:event_jmnCadastrarFuncionariosActionPerformed
 
     private void jmnCadastrarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmnCadastrarClientesActionPerformed
@@ -267,6 +291,8 @@ public class TelaMenu extends javax.swing.JFrame {
        cbmCliente.setVisible(true);
        cmbCargo.setVisible(false);
        btnBuscar.setVisible(false);
+       btnSalvar.setVisible(true);
+       
     }//GEN-LAST:event_jmnCadastrarClientesActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
@@ -316,16 +342,92 @@ if (txtCPF.getText().equals("")) {
     private void jmnAlterarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmnAlterarFuncionarioActionPerformed
        btnBuscar.setVisible(true);
        btnSalvar.setVisible(false);
+       pnlCadastrarUsuario.setVisible(true);
     }//GEN-LAST:event_jmnAlterarFuncionarioActionPerformed
 
     private void jmnAlterarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmnAlterarClientesActionPerformed
        btnBuscar.setVisible(true);
        btnSalvar.setVisible(false);
+       pnlCadastrarUsuario.setVisible(true);
     }//GEN-LAST:event_jmnAlterarClientesActionPerformed
 
     private void pswRepitaSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pswRepitaSenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pswRepitaSenhaActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+       try {
+            //CONECTAR COM O BANCO DE DADOS
+            Connection conexao;
+            PreparedStatement st;
+            Class.forName("com.mysql.jdbc.Driver");
+            conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/bancoacademia", "root", "09041448abner");
+            // DELETAR O PRODUTO PELO CÓDIGO INFORMADO
+            st = conexao.prepareStatement("DELETE FROM tb_usuario WHERE cpf=?");
+            st.setString(1, txtCPF.getText());
+            int res = st.executeUpdate();
+            //VERIFICAR SE O PRODUTO FOI OU NÃO DELETADO E INFORMAR
+            if (res == 1) { // Se excluiu da tabela
+                JOptionPane.showMessageDialog(null, "Produto excluído com sucesso");
+                txtNomeCompleto.setText("");
+                txtDtNascimento.setText("");
+                txtCPF.setText("");
+                cmbSexo.setSelectedItem("");
+                txtEmail.setText("");
+                txtEndereco.setText("");
+                txtContato.setText("");
+                cmbCargo.setSelectedItem("");
+                txtUsuario.setText("");
+                pswSenha.setText("");
+                txtCPF.requestFocus();
+                btnExcluir.setVisible(false);
+                btnAlterar.setVisible(false);
+            } else { // Se não excluiu da tabela
+                JOptionPane.showMessageDialog(null, "Não foi possível excluir o produto com este código");
+            }
+        } catch (ClassNotFoundException ex) {
+            JOptionPane.showMessageDialog(null, "Você não tem o driver na biblioteca " + ex.getMessage());
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Algum parâmetro do BD está incorreto" + ex.getMessage());
+        }
+
+
+
+     
+    }//GEN-LAST:event_btnExcluirActionPerformed
+
+    private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
+try {
+            Connection conexao;
+            PreparedStatement st;
+            Class.forName("com.mysql.jdbc.Driver");
+     conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/bancoacademia", "root", "09041448abner");
+            st = conexao.prepareStatement("UPDATE tb_usuario SET nm_completo = ?, dt_nascimento = ?, sexo = ?, email = ?, endereco = ?, contato = ?, cargo = ?  WHERE cpf = ?");
+            st.setString(1, txtNomeCompleto.getText());
+            st.setString(2, txtDtNascimento.getText());
+            st.setString(3, cmbSexo.getSelectedItem().toString());
+            st.setString(4, txtEmail.getText());
+            st.setString(5, txtEndereco.getText());
+            st.setString(6, txtContato.getText());
+            st.setString(7, cmbCargo.getSelectedItem().toString());
+            st.setString(8, txtCPF.getText());
+            st.executeUpdate(); //Executa o comando SQL UPDATE
+            JOptionPane.showMessageDialog(null,"Alteração realizada com sucesso");
+            txtNomeCompleto.setText("");
+            txtDtNascimento.setText("");
+            cmbSexo.setSelectedItem("");
+            txtEmail.setText("");
+            txtEndereco.setText("");
+            txtContato.setText("");
+            cmbCargo.setSelectedItem("");
+             btnExcluir.setVisible(false);
+             btnAlterar.setVisible(false);
+    } catch (ClassNotFoundException ex) {
+        	JOptionPane.showMessageDialog(null, "Você não tem o driver na biblioteca " + ex.getMessage());
+    } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Algum parâmetro do BD está incorreto" + ex.getMessage());
+    }        
+    }//GEN-LAST:event_btnAlterarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -364,11 +466,14 @@ if (txtCPF.getText().equals("")) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAlterar;
     private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnExcluir;
     private javax.swing.JToggleButton btnSalvar;
     private javax.swing.JComboBox<String> cbmCliente;
     private javax.swing.JComboBox<String> cmbCargo;
     private javax.swing.JComboBox<String> cmbSexo;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jmnAlterarClientes;
