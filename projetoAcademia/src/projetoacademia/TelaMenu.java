@@ -56,6 +56,10 @@ public class TelaMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
         pnlCadastrarUsuario = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtDtNascimento = new javax.swing.JTextField();
@@ -76,14 +80,24 @@ public class TelaMenu extends javax.swing.JFrame {
         btnExcluir = new javax.swing.JButton();
         btnAlterar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jmnClientes = new javax.swing.JMenu();
-        jmnCadastrarClientes = new javax.swing.JMenuItem();
-        jmnAlterarClientes = new javax.swing.JMenuItem();
         jmnFuncionarios = new javax.swing.JMenu();
         jmnCadastrarFuncionarios = new javax.swing.JMenuItem();
         jmnAlterarFuncionario = new javax.swing.JMenuItem();
+        jmnClientes = new javax.swing.JMenu();
+        jmnCadastrarClientes = new javax.swing.JMenuItem();
+        jmnAlterarClientes = new javax.swing.JMenuItem();
+        jmnTreinos = new javax.swing.JMenu();
+        jmnTreinosTipos = new javax.swing.JMenuItem();
 
         jButton1.setText("jButton1");
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jMenu1.setText("File");
+        jMenuBar2.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar2.add(jMenu2);
 
         setTitle("TelaMenu");
         getContentPane().setLayout(null);
@@ -192,6 +206,26 @@ public class TelaMenu extends javax.swing.JFrame {
         getContentPane().add(pnlCadastrarUsuario);
         pnlCadastrarUsuario.setBounds(0, 0, 620, 360);
 
+        jmnFuncionarios.setText("Funcionarios");
+
+        jmnCadastrarFuncionarios.setText("Cadastrar");
+        jmnCadastrarFuncionarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmnCadastrarFuncionariosActionPerformed(evt);
+            }
+        });
+        jmnFuncionarios.add(jmnCadastrarFuncionarios);
+
+        jmnAlterarFuncionario.setText("Alterar");
+        jmnAlterarFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmnAlterarFuncionarioActionPerformed(evt);
+            }
+        });
+        jmnFuncionarios.add(jmnAlterarFuncionario);
+
+        jMenuBar1.add(jmnFuncionarios);
+
         jmnClientes.setText("Clientes");
 
         jmnCadastrarClientes.setText("Cadastrar");
@@ -212,25 +246,17 @@ public class TelaMenu extends javax.swing.JFrame {
 
         jMenuBar1.add(jmnClientes);
 
-        jmnFuncionarios.setText("Funcionarios");
+        jmnTreinos.setText("Treinos");
 
-        jmnCadastrarFuncionarios.setText("Cadastrar");
-        jmnCadastrarFuncionarios.addActionListener(new java.awt.event.ActionListener() {
+        jmnTreinosTipos.setText("Treinos Tipos");
+        jmnTreinosTipos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmnCadastrarFuncionariosActionPerformed(evt);
+                jmnTreinosTiposActionPerformed(evt);
             }
         });
-        jmnFuncionarios.add(jmnCadastrarFuncionarios);
+        jmnTreinos.add(jmnTreinosTipos);
 
-        jmnAlterarFuncionario.setText("Alterar");
-        jmnAlterarFuncionario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmnAlterarFuncionarioActionPerformed(evt);
-            }
-        });
-        jmnFuncionarios.add(jmnAlterarFuncionario);
-
-        jMenuBar1.add(jmnFuncionarios);
+        jMenuBar1.add(jmnTreinos);
 
         setJMenuBar(jMenuBar1);
 
@@ -429,6 +455,12 @@ try {
     }        
     }//GEN-LAST:event_btnAlterarActionPerformed
 
+    private void jmnTreinosTiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmnTreinosTiposActionPerformed
+       TelaTreinos tela;
+      tela = new TelaTreinos();
+      tela.setVisible(true);  
+    }//GEN-LAST:event_jmnTreinosTiposActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -475,13 +507,19 @@ try {
     private javax.swing.JComboBox<String> cmbSexo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jmnAlterarClientes;
     private javax.swing.JMenuItem jmnAlterarFuncionario;
     private javax.swing.JMenuItem jmnCadastrarClientes;
     private javax.swing.JMenuItem jmnCadastrarFuncionarios;
     private javax.swing.JMenu jmnClientes;
     private javax.swing.JMenu jmnFuncionarios;
+    private javax.swing.JMenu jmnTreinos;
+    private javax.swing.JMenuItem jmnTreinosTipos;
     private javax.swing.JLabel lblSaudacao;
     private javax.swing.JPanel pnlCadastrarUsuario;
     private javax.swing.JPasswordField pswRepitaSenha;
