@@ -37,6 +37,7 @@ public class TelaLogin extends javax.swing.JFrame {
         txtUsuario = new javax.swing.JTextField();
         btnEntrar = new javax.swing.JButton();
         pswSenha = new javax.swing.JPasswordField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -61,11 +62,16 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEntrar);
-        btnEntrar.setBounds(250, 220, 72, 24);
+        btnEntrar.setBounds(250, 220, 61, 21);
 
         pswSenha.setText("jPasswordField1");
         getContentPane().add(pswSenha);
         pswSenha.setBounds(160, 134, 250, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/7cffd728-6865-4bbf-a861-f5d872e23e6a.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(-260, -330, 880, 710);
 
         setSize(new java.awt.Dimension(605, 399));
         setLocationRelativeTo(null);
@@ -155,6 +161,7 @@ public class TelaLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPasswordField pswSenha;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
